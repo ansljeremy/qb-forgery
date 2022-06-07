@@ -1,18 +1,5 @@
 local QBCore = exports['qb-core']:GetCoreObject()
 
--- local firstname = nil
--- local lastname = nil
--- local birthday = nil
--- local gender = nil
--- local nationality = nil
--- local info = {}
-
--- RegisterNetEvent('QBCore:Client:OnPlayerLoaded')
--- AddEventHandler('QBCore:Client:OnPlayerLoaded', function()
---     isLoggedIn = true
---     PlayerData = QBCore.Functions.GetPlayerData()
--- end)
-
 CreateThread(function()
     exports['qb-target']:AddBoxZone("ForgeryEnter", vector3(-333.5, 6228.77, 31.67), 0.2, 1.0, {
         name="ForgeryEnter",
