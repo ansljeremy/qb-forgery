@@ -70,7 +70,6 @@ end)
 
 RegisterNetEvent('qb-forgery:client:enter', function(source)
     local Ped = PlayerPedId()
-    local PlayerCoords = GetEntityCoords(Ped)
     if not IsPedInAnyVehicle(Ped, false) then
         DoScreenFadeOut(1000)
         Wait(1500)
@@ -83,7 +82,6 @@ end)
 
 RegisterNetEvent('qb-forgery:client:leave', function(source)
     local Ped = PlayerPedId()
-    local PlayerCoords = GetEntityCoords(Ped)
     if not IsPedInAnyVehicle(Ped, false) then
         DoScreenFadeOut(1000)
         Wait(1500)
@@ -133,24 +131,24 @@ RegisterNetEvent('qb-forgery:client:ForgeID', function(source)
             local firstname = (dialog['firstname'])
             local lastname = (dialog['lastname'])
             local birthday = (dialog['birthday'])
-            local nationality = (dialog['nationality']) 
-            
+            local nationality = (dialog['nationality'])
+
             QBCore.Functions.Progressbar("forge_docs", "Forging ID...", (Config.CraftingTime*1000), false, false, {
                 disableMovement = true,
                 disableCarMovement = true,
                 disableMouse = false,
                 disableCombat = true,
-            }, 
+            },
             {
                 animDict = "anim@amb@clubhouse@tutorial@bkr_tut_ig3@",
                 anim = "machinic_loop_mechandplayer",
                 flags = 49,
             }, {}, function()
-                
+
             end, function()
                 TriggerServerEvent("qb-forgery:server:ForgeID",citizenid, firstname, lastname, birthday, nationality)
             end)
-        
+
         end
     end
 end, false)
@@ -189,23 +187,22 @@ RegisterNetEvent('qb-forgery:client:ForgeDrivers', function(source)
 
     if dialog ~= nil then
         for k,v in pairs(dialog) do
-            local citizenid = tostring(QBCore.Shared.RandomStr(3) .. QBCore.Shared.RandomInt(5)):upper()
             local firstname = (dialog['firstname'])
             local lastname = (dialog['lastname'])
             local birthday = (dialog['birthday'])
-            
+
             QBCore.Functions.Progressbar("forge_docs", "Forging License...", (Config.CraftingTime*1000), false, false, {
                 disableMovement = true,
                 disableCarMovement = true,
                 disableMouse = false,
                 disableCombat = true,
-            }, 
+            },
             {
                 animDict = "anim@amb@clubhouse@tutorial@bkr_tut_ig3@",
                 anim = "machinic_loop_mechandplayer",
                 flags = 49,
             }, {}, function()
-                
+
             end, function()
                 TriggerServerEvent("qb-forgery:server:ForgeDrivers", firstname, lastname, birthday)
             end)

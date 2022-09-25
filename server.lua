@@ -1,7 +1,6 @@
 local QBCore = exports['qb-core']:GetCoreObject()
 
-RegisterServerEvent("qb-forgery:server:ForgeID")
-AddEventHandler("qb-forgery:server:ForgeID", function(citizenid, firstname, lastname, birthday, nationality)
+RegisterServerEvent("qb-forgery:server:ForgeID", function(citizenid, firstname, lastname, birthday, nationality)
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
     if Player.PlayerData.money.cash >= Config.Cost then
@@ -22,8 +21,7 @@ AddEventHandler("qb-forgery:server:ForgeID", function(citizenid, firstname, last
     end
 end)
 
-RegisterServerEvent("qb-forgery:server:ForgeDrivers")
-AddEventHandler("qb-forgery:server:ForgeDrivers", function(firstname,lastname,birthday)
+RegisterServerEvent("qb-forgery:server:ForgeDrivers", function(firstname,lastname,birthday)
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
     if Player.PlayerData.money.cash >= Config.Cost then
