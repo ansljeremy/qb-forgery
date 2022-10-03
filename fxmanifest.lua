@@ -1,7 +1,7 @@
 fx_version 'cerulean'
 game 'gta5'
 
-author 'Jeremу#1234 <https://github.com/ansljeremy>'
+author 'Jeremy#0004 <https://github.com/ansljeremy>'
 description 'An ID/Drivers License forging system.'
 version '1.0.0'
 
