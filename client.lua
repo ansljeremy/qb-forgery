@@ -73,7 +73,7 @@ RegisterNetEvent('qb-forgery:client:enter', function()
     if not IsPedInAnyVehicle(Ped, false) then
         DoScreenFadeOut(1000)
         Wait(1500)
-        SetEntityCoords(Ped, 1173.54, -3196.63, -39.01, 100.64)
+        SetEntityCoords(Ped, 1173.54, -3196.63, -39.01)
         DoScreenFadeIn(1000)
     else
         QBCore.Functions.Notify("You cannot enter while in a vehicle.")
@@ -85,7 +85,7 @@ RegisterNetEvent('qb-forgery:client:leave', function()
     if not IsPedInAnyVehicle(Ped, false) then
         DoScreenFadeOut(1000)
         Wait(1500)
-        SetEntityCoords(Ped, -333.5, 6228.77, 31.67, 315)
+        SetEntityCoords(Ped, -333.5, 6228.77, 31.67)
         DoScreenFadeIn(1000)
 
     else
@@ -149,7 +149,7 @@ RegisterNetEvent('qb-forgery:client:ForgeID', function()
         end)
 
         end
-end, false)
+end)
 
 RegisterNetEvent('qb-forgery:client:ForgeDrivers', function()
     local dialog = exports['qb-input']:ShowInput({
@@ -204,4 +204,4 @@ RegisterNetEvent('qb-forgery:client:ForgeDrivers', function()
             TriggerServerEvent("qb-forgery:server:ForgeDrivers", firstname, lastname, birthday)
         end)
     end
-end, false)
+end)
